@@ -78,6 +78,7 @@ public class PickItem : Command
     }
     public override void Execute( )
     {
+        player.PickItem();
     }
 }
 
@@ -89,6 +90,7 @@ public class DropItem : Command
     }
     public override void Execute( )
     {
+        player.DropItem();
     }
 }
 
@@ -100,6 +102,7 @@ public class Chop : Command
     }
     public override void Execute( )
     {
+        player.Chop();
     }
 }
 
@@ -111,6 +114,7 @@ public class Serve: Command
     }
     public override void Execute( )
     {
+        player.Serve();
     }
 }
 
@@ -122,5 +126,6 @@ public class ThrowInTrash : Command
     }
     public override void Execute( )
     {
+        player.ThrowInTrash();
     }
 }

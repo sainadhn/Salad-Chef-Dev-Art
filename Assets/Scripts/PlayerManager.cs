@@ -24,9 +24,12 @@ public class PlayerManager : SingleTon<PlayerManager> {
         {
             GameObject player = Instantiate(playerObject, playerSpawnPoints[i].position, Quaternion.identity);
             playersArray[i] = player.GetComponent<Player>();
+            playersArray[i].PlayerIndex = i;
+           // playersArray[i].SetPlayerSpecificData();
         }
 
         AssignControls();
+        GameManager.Instance.EnableHud(true);
     }
 
     void AssignControls()
@@ -40,8 +43,6 @@ public class PlayerManager : SingleTon<PlayerManager> {
     {
         playersArray = new Player[noofPlayers];
         CreatePlayers();
-
-        
     }
 	
 	// Update is called once per frame
@@ -67,11 +68,16 @@ public class PlayerManager : SingleTon<PlayerManager> {
 
     public void UpdatePlayerTime(int playerIndex, float time)
     {
-        playersArray[playerIndex].time += time;
+        playersArray[playerIndex].Time += time;
     }
 
     public void UpdatePlayerSpeed(int playerIndex, float speed)
     {
         playersArray[playerIndex].speed += speed;
+    }
+
+    public void ShowMessage(int playerIndex, string message)
+    {
+        StartCoroutine(playersArray[playerIndex].ShowMessage(message));
     }
 }

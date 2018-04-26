@@ -9,7 +9,7 @@ public class CustomerManager : SingleTon<CustomerManager>
 
     public Texture[] customerImages;  
 
-    Customer[] customers;
+    public Customer[] customers;
     int maxNoofCustomers;
 	// Use this for initialization
 	void Start ()

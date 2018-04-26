@@ -19,5 +19,6 @@ public class SaladDetails
 public class VegetableDetails
 {
     public int id;
+    public string name;
     public float timeToChop;
 }

@@ -27,7 +27,7 @@ public class Customer : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        timer = new Timer();
+        timer = new Timer(false);
         playersWhoMadeMeAngry = new List<int>();
         timeLeft = transform.Find("TimeLeft");
         timeLeftScale = timeLeft.localScale;

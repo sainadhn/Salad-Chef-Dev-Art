@@ -9,6 +9,8 @@ public class GameManager : SingleTon<GameManager> {
     public TextAsset vegetablesJson;
 
     public GameData gameData;
+
+    public GameObject HudUI;
 	// Use this for initialization
 	void Start ()
     {
@@ -46,13 +48,16 @@ public class GameManager : SingleTon<GameManager> {
             JSONNode n = vegArray[i];
             VegetableDetails vd = new VegetableDetails();
             vd.id = n["VegetableId"].AsInt;
+            vd.name = n["Name"];
             vd.timeToChop = n["TimeToChopInSeconds"].AsFloat;
-            Debug.Log("n   "+ n["VegetableId"] +"  timeToLeave " + n["TimeToChopInSeconds"]);
             gameData.vegetableDetails[i] = vd;
         }
         //..............
 
     }
 
-
+    public void EnableHud(bool isEnable)
+    {
+        HudUI.SetActive(isEnable);
+    }
 }
