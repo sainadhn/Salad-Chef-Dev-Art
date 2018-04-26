@@ -1,0 +1,8 @@
+[
+{"VegetableId":"1","TimeToChopInSeconds":"2"},
+{"VegetableId":"2","TimeToChopInSeconds":"1"},
+{"VegetableId":"3","TimeToChopInSeconds":"1.5"},
+{"VegetableId":"4","TimeToChopInSeconds":"2.5"},
+{"VegetableId":"5","TimeToChopInSeconds":"2"},
+{"VegetableId":"6","TimeToChopInSeconds":"1"}
+]
